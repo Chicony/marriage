@@ -10,23 +10,64 @@
     <link rel="stylesheet" href="./template/style/main.css">
   </head>
   <body>
-    <header class="container header">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-8 d-md-none">
+            <div class="header-title">Приглашение</div>
+          </div>
+          <div class="col-4 col-md-12">
+            <nav class="navbar navbar-expand-md">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sectionInvite">Приглашение</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sectionMap">Карта</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sectionTimer">Таймер</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Дресс-код</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sectionTag">Хештег</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
-    <div class="banner">
-
+    <div class="container banner">
+      <div class="container-image">
+        <img class="image-border" src="template/image/border.webp" alt="">
+        <div class="container-data">
+          <div class="first-name">Сергей</div>
+          <div class="symbol">&</div>
+          <div class="last-name">Дарья</div>
+          <div class="date">11.09.2022</div>
+          <div class="tag">#СергейДарьяСемья</div>
+        </div>
+      </div>
+      <div class="title">Сергей и Дарья</div>
+      <div class="description">
+        С огромной радостью приглашают Вас на свою свадьбу!
+      </div>
     </div>
 
-    <div class="container section">
+    <div class="container section" id="sectionInvite">
       <div class="title">Дорогие родные и друзья!</div>
       <div class="description">
         Скоро наступит важный день в нашей жизни – мы станем семьей
@@ -60,7 +101,7 @@
         г. Йошкар-Ола, д. Данилово 198а
       </div>
     </div>
-    <div class="container section">
+    <div class="container section" id="sectionMap">
       <div class="title">Как добраться</div>
       <div class="description">
         Для Вашего удобства мы подготовили карту.
@@ -81,7 +122,7 @@
         самого счастливого дня в нашей жизни!
       </div>
     </div>
-    <div class="section-time">
+    <div class="section-time" id="sectionTimer">
       <div class="description">
         11 СЕНТЯБРЯ 2022
         <br />
@@ -89,7 +130,7 @@
       </div>
       <div class="timer" id="timer"></div>
     </div>
-    <div class="container section">
+    <div class="container section" id="sectionTag">
       <div class="title">
         Свадебный хештег
       </div>
@@ -99,7 +140,7 @@
         сделанные в день торжества, пожалуйста, используйте наш свадебный хештег
       </div>
       <div class="description gold">
-        #ЁжикДарьяСемья
+        #СергейДарьяСемья
       </div>
     </div>
     <div class="container section">
