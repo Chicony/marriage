@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "CeremoniousOne";
+    font-display: swap;
+    src: url("../font/CeremoniousOne.eot");
+    src: url("../font/CeremoniousOne.eot?#iefix") format("embedded-opentype"), url("../font/CeremoniousOne.woff2") format("woff2"), url("../font/CeremoniousOne.woff") format("woff"), url("../font/CeremoniousOne.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Oranienbaum";
+    font-display: swap;
+    src: url("../font/Oranienbaum-Regular.eot");
+    src: url("../font/Oranienbaum-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Oranienbaum-Regular.woff2") format("woff2"), url("../font/Oranienbaum-Regular.woff") format("woff"), url("../font/Oranienbaum-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}

@@ -1,0 +1,156 @@
+body
+{
+    min-width: 320px;
+    background-image: url("../image/main.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    font-family: "Oranienbaum", sans-serif;
+}
+
+body:before
+{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    z-index: -1;
+}
+
+.section
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.section:before
+{
+    content: '';
+    background-image: url("../image/section.png");
+    background-size: cover;
+    background-position: center;
+    display: block;
+    width: 250px;
+    height: 80px;
+    margin: 0 auto 30px;
+}
+
+.title
+{
+    font-family: "CeremoniousOne", sans-serif;
+    font-size: 50px;
+    color: #AB7C18;
+    margin-bottom: 16px;
+}
+
+.description
+{
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.description.gold
+{
+    font-size: 30px;
+    color: #AB7C18;
+}
+
+.map-container
+{
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.preloader
+{
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+}
+
+.section-time
+{
+    background-image: url("../image/time.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.section-time:before
+{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: 1;
+}
+
+.section-time .description
+{
+    font-size: 34px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.section-time .small
+{
+    font-size: 24px;
+}
+
+.timer
+{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.timer .box:not(:last-of-type)
+{
+    border-right: 1px solid #fff;
+}
+
+.timer .box
+{
+    text-align: center;
+    width: 70px;
+    height: 70px;
+}
+
+.timer .number
+{
+    font-size: 26px;
+}
+
+.timer .text
+{
+    font-size: 18px;
+}
+
+@media (max-width: 575px) {
+    .title
+    {
+        font-size: 40px;
+    }
+
+    .description
+    {
+        font-size: 18px;
+    }
+}
