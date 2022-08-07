@@ -1,7 +1,7 @@
 window.onload = function() {
     loadMap('#mapContainer');
 
-    let countDownDate = new Date("Sep 11, 2022 11:00:00").getTime();
+    let countDownDate = new Date("Sep 10, 2022 11:30:00").getTime();
     let x = setInterval(function() {
         let now = new Date().getTime();
 
