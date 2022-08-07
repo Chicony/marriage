@@ -278,7 +278,7 @@ body:before
 
     .navbar
     {
-        justify-content: right;
+        justify-content: flex-end;
     }
 
     .offcanvas-body .nav-link
