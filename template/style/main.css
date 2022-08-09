@@ -409,7 +409,7 @@ body:before
         width: 300px;
         height: 300px;
         font-size: 58px;
-        padding-top: 24px;
+        padding-top: 32px;
         top: 10px;
         left: 10px;
     }
@@ -427,14 +427,14 @@ body:before
 
     .image-border.right
     {
-        right: -40px;
-        bottom: -50px;
+        right: -50px;
+        bottom: -60px;
     }
 
     .image-border.left
     {
-        left: -40px;
-        top: -50px;
+        left: -50px;
+        top: -60px;
     }
 
     .image-border
