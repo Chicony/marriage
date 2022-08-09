@@ -16,7 +16,7 @@ body:before
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     z-index: -1;
 }
@@ -60,36 +60,96 @@ body:before
 .banner
 {
     text-align: center;
+    overflow-x: hidden;
+    padding-top: 16px;
 }
 
-.container-image
+.container-banner
 {
-    margin: 0 auto;
-    width: fit-content;
+    margin: 40px auto;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 215, 0, .4);
     position: relative;
+}
+
+.container-border
+{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 215, 0, .4);
+    position: absolute;
+}
+
+.container-border.right
+{
+    top: 22px;
+    right: 14px;
+}
+
+.container-border.left
+{
+    bottom: 10px;
+    left: 16px;
 }
 
 .image-border
 {
-    max-width: 100%;
-    height: 600px;
+    width: 300px;
+    height: 360px;
+    position: absolute;
+    z-index: 10;
+}
+
+.image-border.left
+{
+    left: -110px;
+    top: -70px;
+    transform: rotate(30deg);
+}
+
+.image-border.right
+{
+    right: -110px;
+    bottom: -70px;
+    transform: rotate(30deg);
 }
 
 .container-data
 {
     font-family: "CeremoniousOne", sans-serif;
     font-size: 80px;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    border: 2px solid #ffd700;
+    background-color: rgba(255, 255, 255, .5);
     color: #AB7C18;
-    width: 250px;
     position: absolute;
-    top: 140px;
-    left: calc(50% - 125px);
+    top: 35px;
+    left: 35px;
+    padding: 40px 70px 0;
 }
 
 .container-data .last-name,
 .container-data .first-name
 {
     letter-spacing: 10px;
+}
+
+.container-data .last-name,
+.container-data .first-name,
+.container-data .date
+{
+    position: relative;
+    z-index: 20;
+}
+
+.container-data .first-name
+{
+    text-align: left;
 }
 
 .container-data .last-name
@@ -101,15 +161,6 @@ body:before
 {
     text-align: center;
     font-size: 50px;
-    margin-top: -30px;
-}
-
-.container-data .tag
-{
-    font-family: "Oranienbaum", sans-serif;
-    text-align: center;
-    font-size: 20px;
-    margin-top: -16px;
 }
 
 .container-data .symbol
@@ -123,6 +174,8 @@ body:before
 {
     padding-top: 20px;
     padding-bottom: 20px;
+    position: relative;
+    z-index: 100;
 }
 
 .offcanvas-body
@@ -264,11 +317,46 @@ body:before
     width: 250px !important;
 }
 
+.container-colors
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.color-box
+{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 8px;
+}
+
+.color-box.yellow
+{
+    background-color: #F5DEB4;
+}
+
+.color-box.red
+{
+    background-color: #E9C3B8;
+}
+
+.color-box.purple
+{
+    background-color: #BDA3BE;
+}
+
+.color-box.green
+{
+    background-color: #86A294;
+}
+
 @media (max-width: 767px) {
     .header
     {
         position: fixed;
-        z-index: 10;
+        z-index: 50;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.8);
         padding-top: 6px;
@@ -309,26 +397,61 @@ body:before
         font-size: 18px;
     }
 
-    .image-border
+    .container-banner
     {
-        height: 350px;
-    }
-
-    .container-image
-    {
-        padding-top: 36px;
+        width: 320px;
+        height: 320px;
+        margin-top: 70px;
     }
 
     .container-data
     {
-        font-size: 50px;
-        width: fit-content;
-        left: calc(50% - 82px);
+        width: 300px;
+        height: 300px;
+        font-size: 58px;
+        padding-top: 24px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .container-data .last-name,
+    .container-data .first-name
+    {
+        letter-spacing: 4px;
+    }
+
+    .container-data .date
+    {
+        margin-top: -24px;
+    }
+
+    .image-border.right
+    {
+        right: -40px;
+        bottom: -50px;
+    }
+
+    .image-border.left
+    {
+        left: -40px;
+        top: -50px;
+    }
+
+    .image-border
+    {
+        width: 180px;
+        height: 216px;
+    }
+
+    .container-border
+    {
+        width: 310px;
+        height: 310px;
     }
 
     .container-data .symbol
     {
-        margin: -30px 0;
+        margin: -34px 0;
     }
     
     .banner
@@ -336,18 +459,5 @@ body:before
         overflow: hidden;
     }
 
-    .image-border
-    {
-        width: 368px;
-        height: 440px;
-        max-width: initial;
-    }
-}
 
-@media (max-width: 390px) {
-    .image-border
-    {
-        margin-left: -40px;
-        margin-right: -40px;
-    }
 }
