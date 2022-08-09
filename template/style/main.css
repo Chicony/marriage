@@ -60,7 +60,6 @@ body:before
 .banner
 {
     text-align: center;
-    overflow-x: hidden;
     padding-top: 16px;
 }
 
@@ -72,6 +71,8 @@ body:before
     border-radius: 50%;
     border: 2px solid rgba(255, 215, 0, .4);
     position: relative;
+    animation-duration: 3s;
+    animation-name: zoomIn;
 }
 
 .container-border
@@ -81,6 +82,8 @@ body:before
     border-radius: 50%;
     border: 2px solid rgba(255, 215, 0, .4);
     position: absolute;
+    animation-duration: 3s;
+    animation-name: zoomIn;
 }
 
 .container-border.right
@@ -101,6 +104,8 @@ body:before
     height: 360px;
     position: absolute;
     z-index: 10;
+    animation-duration: 3s;
+    animation-name: zoomInImage;
 }
 
 .image-border.left
@@ -131,6 +136,8 @@ body:before
     top: 35px;
     left: 35px;
     padding: 40px 70px 0;
+    animation-duration: 3s;
+    animation-name: zoomIn;
 }
 
 .container-data .last-name,
@@ -150,17 +157,23 @@ body:before
 .container-data .first-name
 {
     text-align: left;
+    animation-duration: 5s;
+    animation-name: zoomIn;
 }
 
 .container-data .last-name
 {
     text-align: right;
+    animation-duration: 5s;
+    animation-name: zoomIn;
 }
 
 .container-data .date
 {
     text-align: center;
     font-size: 50px;
+    animation-duration: 5s;
+    animation-name: zoomIn;
 }
 
 .container-data .symbol
@@ -168,6 +181,8 @@ body:before
     text-align: center;
     color: darkgray;
     margin: -50px 0;
+    animation-duration: 5s;
+    animation-name: zoomIn;
 }
 
 .header
@@ -352,6 +367,13 @@ body:before
     background-color: #86A294;
 }
 
+@media (max-width: 991px) {
+    .banner
+    {
+        overflow-x: hidden;
+    }
+}
+
 @media (max-width: 767px) {
     .header
     {
@@ -458,6 +480,28 @@ body:before
     {
         overflow: hidden;
     }
+}
 
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(1.5);
+    }
 
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomInImage {
+    from {
+        opacity: 0;
+        transform: scale(1.5) rotate(30deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(30deg);
+    }
 }
